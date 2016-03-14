@@ -6,11 +6,38 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Log In</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="MarcoSanna">
+		<meta name="description" content="Area di log in per l'utente">
+		<meta name="keywords" content="auto, ricambi, macchina, autoricambi, pezzi, Cagliari, compravendita">
+    
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1> Autoricambi Online  </h1>
+        <button onclick="window.location.href='descrizione.html'"> Descrizione</button>
+        <button onclick="window.location.href='cliente.html'"> Area Cliente</button>
+        <button onclick="window.location.href='venditore.html'"> Area Venditore</button>
+        <hr/>
+        <div >
+        <h2>Inserisci i dati per il login:</h2>
+        <form method="post" action="login.html">
+            <label for="nome">Nome utente</label>
+            <input name="nome" id="nome" type="text"/> 
+            <label for="password">Password</label>
+            <input name="password" id="password" type="password"/>
+            
+            <label for="account">Tipologia account</label>
+            <select name="account" id="account">
+                <option value="cliente">Cliente</option>
+                <option value="venditore">Venditore</option>                
+            </select>
+            
+            
+            <input type="submit" value="Log In"/>
+        </form>
+       </div>
+        <hr/>
     </body>
 </html>
