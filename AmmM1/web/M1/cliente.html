@@ -6,28 +6,58 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Pagina Utente</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="MarcoSanna">
+		<meta name="description" content="Area utenti per gli acquisti">
+		<meta name="keywords" content="autoricambi, acquisti, macchina, auto, ricambi ">
     </head>
-    <body>
+    
+    <body>        
         <h1> Autoricambi Online  </h1>
         <button onclick="window.location.href='descrizione.html'"> Descrizione</button>
         <button onclick="window.location.href='login.html'"> Log In</button>
         <hr/>
         
+        <h2> Articoli in vendita </h2>
+        
         <table>
+            
+            <!-- NOMI ARTICOLI IN VENDITA -->
             <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
+                <td>Paraurti anteriore Fiat 500</td>
+                <td>Cera per auto Arexons</td>
+                <td>Fanali anteriori Citroen C3</td>                
+                <td>Marmitta sportiva Giulietta</td>
+                <td>Fanali posteriori Golf 6</td>
             </tr>
+            
+            <!-- COLLEGAMENTI IMMAGINI ARTICOLI IN VENDITA -->
             <tr>
-                <td>row 1, cell 1</td>
-                <td>row 1, cell 2</td>
+                <td> <img title="Paraurti Anteriore Fiat 500" alt="paraurti anteriore per fiat 500" src="./img/paraurti-anteriore-fiat-500.jpg" width="200" height="150"> </td>
+                <td> <img title="Cera per auto Arexons" alt="cera per auto marca Arexons" src="./img/cera-auto-arexons.jpg" width="200" height="150"> </td>
+                <td> <img title="Fanali Anteriori Citroen C3" alt="coppia di fanali anteriori per citroen c3" src="./img/fanali-anteriori-citroen-c3.jpg" width="200" height="150"> </td>
+                <td> <img title="Marmitta sportiva Alfa Romeo Giulietta" alt="marmitta sportiva per alfa romeo giulietta" src="./img/marmitta-sportiva-alfa-giulietta.jpg" width="200" height="150"> </td>
+                <td> <img title="Fanali Posteriori Golf 6" alt="coppia di fanali posteriori per golf serie sei" src="./img/fanali-posteriori-golf-6.jpg" width="200" height="150"> </td>
             </tr>
+            
+            <!-- DISPONIBILITÀ ARTICOLI IN VENDITA -->
             <tr>
-                <td>row 2, cell 1</td>
-                <td>row 2, cell 2</td>
+                <td>Disponibilità: 1 articolo</td>
+                <td>Disponibilità: 10 articoli</td>
+                <td>Disponibilità: 2 articoli</td>
+                <td>Disponibilità: 5 articoli</td>
+                <td>Disponibilità: 2 articoli</td>                
+            </tr>
+            
+            <!-- LINK PER AGGIUNGERE IL PRODOTTO AL CARRELLO -->
+            <tr>
+                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
+                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
+                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
+                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
+                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
             </tr>
         </table>
         
