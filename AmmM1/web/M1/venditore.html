@@ -6,11 +6,45 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Pagina Venditore</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="MarcoSanna">
+		<meta name="description" content="Area venditore">
+		<meta name="keywords" content="autoricambi, vendita oggetti">    
     </head>
+    
     <body>
-        <div>TODO write content</div>
+        <h1> Autoricambi Online  </h1>
+        <button onclick="window.location.href='descrizione.html'"> Descrizione</button>
+        <button onclick="window.location.href='login.html'"> Log In</button>
+        <hr/>
+        <div >
+        <h2>Metti in vendita un articolo:</h2>
+        <form method="post" action="venditore.html">
+            
+            <ul>
+                <li> <label for="nome">Inserire il nome dell'articolo:   </label> 
+                <input name="nome" id="nome" type="text"/> <br/> <br/> </li>
+
+                <li> <label for="img">Inserire la Url dell'immagine dell'articolo:   </label>
+                <input name="img" id="img" type="url"/> <br/> <br/> </li>
+
+                <li> <label for="descr">Inserire una breve descrizione dell'articolo:    </label>
+                <textarea name="descr" id="descr"> </textarea> <br/> <br/> </li>
+            
+                <li> <label for="price">Inserire il prezzo dell'articolo:    </label> 
+                <input name="price" id="price" type="number"/> <br/> <br/> </li>
+                
+                <li> <label for="price">Inserire la quantità di articoli:    </label> 
+                <input name="price" id="price" type="number"/> <br/> <br/> </li>
+                
+                <button type="submit"> Aggiungi l'oggetto in vendita!</button>
+            
+            </ul> 
+            
+        </form>
+       </div>
+        <hr/>
     </body>
 </html>
