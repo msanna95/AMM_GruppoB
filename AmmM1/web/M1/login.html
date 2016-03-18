@@ -15,29 +15,38 @@ and open the template in the editor.
     </head>
     
     <body>
-        <h1> Autoricambi Online  </h1>
-        <button onclick="window.location.href='descrizione.html'"> Descrizione</button>
-        <button onclick="window.location.href='cliente.html'"> Area Cliente</button>
-        <button onclick="window.location.href='venditore.html'"> Area Venditore</button>
-        <hr/>
-        <div >
-        <h2>Inserisci i dati per il login:</h2>
-        <form method="post" action="login.html">
-            <label for="nome">Nome utente</label>
-            <input name="nome" id="nome" type="text"/> 
-            <label for="password">Password</label>
-            <input name="password" id="password" type="password"/>
+        <header>
+            <h1> Autoricambi Online  </h1>            
+        </header>
+        
+        <nav>
+            <h2> Sezione Navigazione: </h2>
+            <ul>
+                <li><a href="descrizione.html"> Pagina Descrizione </a></li>
+                <li><a href="cliente.html"> Pagina Cliente </a></li>
+                <li><a href="venditore.html"> Pagina Venditore </a> </li>
+            </ul>      
+        </nav>      
+        
+        
+        <article>
+            <section>
+                <h2>Inserisci i dati per il login:</h2>
+                <form method="post" action="login.html">
+                    <label for="nome">Nome utente</label>
+                    <input name="nome" id="nome" type="text"/> 
+                    <label for="password">Password</label>
+                    <input name="password" id="password" type="password"/>
+
+                    <label for="account">Tipologia account</label>
+                    <select name="account" id="account">
+                        <option value="cliente">Cliente</option>
+                        <option value="venditore">Venditore</option>                
+                    </select>
             
-            <label for="account">Tipologia account</label>
-            <select name="account" id="account">
-                <option value="cliente">Cliente</option>
-                <option value="venditore">Venditore</option>                
-            </select>
-            
-            
-            <input type="submit" value="Log In"/>
-        </form>
-       </div>
-        <hr/>
+                    <input type="submit" value="Log In"/>
+                </form>
+            </section>
+       </article>        
     </body>
 </html>

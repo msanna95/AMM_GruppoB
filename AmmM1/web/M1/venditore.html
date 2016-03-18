@@ -15,36 +15,45 @@ and open the template in the editor.
     </head>
     
     <body>
-        <h1> Autoricambi Online  </h1>
-        <button onclick="window.location.href='descrizione.html'"> Descrizione</button>
-        <button onclick="window.location.href='login.html'"> Log In</button>
-        <hr/>
+        <header>
+            <h1> Autoricambi Online  </h1>
+        </header>
         
-        <h2>Metti in vendita un articolo:</h2>
-        <form method="post" action="venditore.html">
-            
+        <nav>
+            <h2> Sezione Navigazione: </h2>
             <ul>
-                <li> <label for="nome">Inserire il nome dell'articolo:   </label> 
-                <input name="nome" id="nome" type="text"/> <br/> <br/> </li>
+                <li><a href="descrizione.html"> Pagina Descrizione </a></li>
+                <li><a href="login.html"> Pagina di Log In </a></li>                
+            </ul>            
+        </nav>
+        
+        <article>
+            <section>
+                <h2>Metti in vendita un articolo:</h2>
+                <form method="post" action="venditore.html">
+            
+                    <ul>
+                        <li> <label for="nome">Inserire il nome dell'articolo:   </label> 
+                        <input name="nome" id="nome" type="text"/> </li>
 
-                <li> <label for="img">Inserire la Url dell'immagine dell'articolo:   </label>
-                <input name="img" id="img" type="url"/> <br/> <br/> </li>
+                        <li> <label for="img">Inserire la Url dell'immagine dell'articolo:   </label>
+                        <input name="img" id="img" type="url"/>  </li>
 
-                <li> <label for="descr">Inserire una breve descrizione dell'articolo:    </label>
-                <textarea name="descr" id="descr"> </textarea> <br/> <br/> </li>
+                        <li> <label for="descr">Inserire una breve descrizione dell'articolo:    </label>
+                        <textarea name="descr" id="descr"> </textarea>  </li>
+
+                        <li> <label for="price">Inserire il prezzo dell'articolo:    </label> 
+                        <input name="price" id="price" type="number"/>  </li>
+
+                        <li> <label for="qnt">Inserire la quantità di articoli:    </label> 
+                        <input name="qnt" id="qnt" type="number"/>  </li>  
+
+                    </ul> 
             
-                <li> <label for="price">Inserire il prezzo dell'articolo:    </label> 
-                <input name="price" id="price" type="number"/> <br/> <br/> </li>
-                
-                <li> <label for="qnt">Inserire la quantità di articoli:    </label> 
-                <input name="qnt" id="qnt" type="number"/> <br/> <br/> </li>  
+                    <button type="submit"> Aggiungi l'oggetto in vendita!</button>
             
-            </ul> 
-            
-            <button type="submit"> Aggiungi l'oggetto in vendita!</button>
-            
-        </form>
-       
-        <hr/>
+                </form>
+            </section>
+        </article>
     </body>
 </html>

@@ -14,61 +14,86 @@ and open the template in the editor.
 		<meta name="keywords" content="autoricambi, acquisto articoli">
     </head>
     
-    <body>        
-        <h1> Autoricambi Online  </h1>
-        <button onclick="window.location.href='descrizione.html'"> Descrizione</button>
-        <button onclick="window.location.href='login.html'"> Log In</button>
-        <hr/>
+    <body>
+        <header>
+            <h1> Autoricambi Online  </h1>            
+        </header>
         
-        <h2> Articoli in vendita </h2>
+        <nav>
+            <h2> Sezione Navigazione: </h2>
+            <ul>
+                <li><a href="descrizione.html"> Pagina Descrizione </a></li>
+                <li><a href="login.html"> Pagina di Log In </a></li>                
+            </ul>            
+        </nav>
         
-        <table>
-            
-            <!-- NOMI ARTICOLI IN VENDITA -->
-            <tr>
-                <td>Paraurti anteriore Fiat 500</td>
-                <td>Cera per auto Arexons</td>
-                <td>Fanali anteriori Citroen C3</td>                
-                <td>Marmitta sportiva Giulietta</td>
-                <td>Fanali posteriori Golf 6</td>
-            </tr>
-            
-            <!-- COLLEGAMENTI IMMAGINI ARTICOLI IN VENDITA -->
-            <tr>
-                <td> <img title="Paraurti Anteriore Fiat 500" alt="paraurti anteriore per fiat 500" src="./img/paraurti-anteriore-fiat-500.jpg" width="200" height="150"> </td>
-                <td> <img title="Cera per auto Arexons" alt="cera per auto marca Arexons" src="./img/cera-auto-arexons.jpg" width="200" height="150"> </td>
-                <td> <img title="Fanali Anteriori Citroen C3" alt="coppia di fanali anteriori per citroen c3" src="./img/fanali-anteriori-citroen-c3.jpg" width="200" height="150"> </td>
-                <td> <img title="Marmitta sportiva Alfa Romeo Giulietta" alt="marmitta sportiva per alfa romeo giulietta" src="./img/marmitta-sportiva-alfa-giulietta.jpg" width="200" height="150"> </td>
-                <td> <img title="Fanali Posteriori Golf 6" alt="coppia di fanali posteriori per golf serie sei" src="./img/fanali-posteriori-golf-6.jpg" width="200" height="150"> </td>
-            </tr>
-            
-            <!-- DISPONIBILITÀ ARTICOLI IN VENDITA -->
-            <tr>
-                <td>Disponibilità: 1 articolo</td>
-                <td>Disponibilità: 10 articoli</td>
-                <td>Disponibilità: 2 articoli</td>
-                <td>Disponibilità: 5 articoli</td>
-                <td>Disponibilità: 2 articoli</td>                
-            </tr>
-            
-            <!-- PREZZO ARTICOLI IN VENDITA -->
-            <tr>
-                <td>Prezzo: 100.00 €</td>
-                <td>Prezzo: 22.50 €</td>
-                <td>Prezzo: 200.00 €</td>
-                <td>Prezzo: 180.00 €</td>
-                <td>Prezzo: 280.00 €</td>
-            </tr>
-            
-            <!-- LINK PER AGGIUNGERE IL PRODOTTO AL CARRELLO -->
-            <tr>
-                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
-                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
-                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
-                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
-                <td><button onclick="window.location.href='cliente.html'"> Aggiungi al carrello</button>   </td> 
-            </tr>
-        </table>        
-        <hr/>
+        <article>
+            <section>
+                <h2> Articoli in vendita </h2>
+        
+                <table>
+                    
+                    <tr>
+                        <th>Nome articolo</th>
+                        <th>Foto articolo</th>
+                        <th>Disponibilità articolo</th>
+                        <th>Prezzo articolo</th>
+                        <th>Aggiungi al carrello</th>
+                    </tr>
+
+                    <!-- PRIMO ARTICOLO -->
+                    <tr>
+                        <td>Paraurti anteriore Fiat 500</td>
+                        <td> <img title="Paraurti Anteriore Fiat 500" alt="paraurti anteriore per fiat 500" 
+                                  src="./img/paraurti-anteriore-fiat-500.jpg" width="200" height="150"> </td>
+                        <td>Disponibilità: 1 articolo</td>
+                        <td>Prezzo: 100.00 €</td>
+                        <td><a href="cliente.html"> Aggiungi</a>   </td>
+                    </tr>
+
+                    <!-- SECONDO ARTICOLO -->
+                    <tr>
+                        <td>Cera per auto Arexons</td>
+                        <td> <img title="Cera per auto Arexons" alt="cera per auto marca Arexons" 
+                                  src="./img/cera-auto-arexons.jpg" width="200" height="150"> </td>
+                        <td>Disponibilità: 10 articoli</td>
+                        <td>Prezzo: 22.50 €</td>
+                        <td><a href="cliente.html"> Aggiungi</a>   </td>
+                    </tr>
+
+                    <!-- TERZO ARTICOLO -->
+                    <tr>
+                        <td>Fanali anteriori Citroen C3</td>
+                        <td> <img title="Fanali Anteriori Citroen C3" alt="coppia di fanali anteriori per citroen c3" 
+                                  src="./img/fanali-anteriori-citroen-c3.jpg" width="200" height="150"> </td>                        
+                        <td>Disponibilità: 2 articoli</td>
+                        <td>Prezzo: 200.00 €</td>
+                        <td><a href="cliente.html"> Aggiungi</a>   </td>
+                    </tr>
+
+                    <!-- QUARTO ARTICOLO -->
+                    <tr>
+                        <td>Marmitta sportiva Giulietta</td>
+                        <td> <img title="Marmitta sportiva Alfa Romeo Giulietta" alt="marmitta sportiva per alfa romeo giulietta" 
+                                  src="./img/marmitta-sportiva-alfa-giulietta.jpg" width="200" height="150"> </td>
+                        <td>Disponibilità: 5 articoli</td>
+                        <td>Prezzo: 180.00 €</td>
+                        <td><a href="cliente.html"> Aggiungi</a>   </td>
+                    </tr>
+
+                    <!-- QUINTO ARTICOLO -->
+                    <tr>
+                        <td>Fanali posteriori Golf 6</td>
+                        <td> <img title="Fanali Posteriori Golf 6" alt="coppia di fanali posteriori per golf serie sei" 
+                                  src="./img/fanali-posteriori-golf-6.jpg" width="200" height="150"> </td>
+                        <td>Disponibilità: 2 articoli</td>                
+                        <td>Prezzo: 280.00 €</td>
+                        <td><a href="cliente.html"> Aggiungi</a>   </td>
+                    </tr>
+                </table>               
+            </section>            
+        </article>
+                
+        
     </body>
 </html>
