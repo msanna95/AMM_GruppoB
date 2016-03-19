@@ -30,23 +30,23 @@ and open the template in the editor.
         <article>
             <section>
                 <h2>Metti in vendita un articolo:</h2>
-                <form method="post" action="venditore.html">
+                <form method="get" action="venditore.html">
             
                     <ul>
-                        <li> <label for="nome">Inserire il nome dell'articolo:   </label> 
-                        <input name="nome" id="nome" type="text"/> </li>
+                        <li> <label for="name">Inserire il nome dell'articolo:   </label> 
+                        <input name="name" id="name" type="text"/> </li>
 
                         <li> <label for="img">Inserire la Url dell'immagine dell'articolo:   </label>
                         <input name="img" id="img" type="url"/>  </li>
 
                         <li> <label for="descr">Inserire una breve descrizione dell'articolo:    </label>
-                        <textarea name="descr" id="descr"> </textarea>  </li>
+                        <textarea name="descr" id="descr" cols="30" rows="4"> </textarea>  </li>
 
                         <li> <label for="price">Inserire il prezzo dell'articolo:    </label> 
-                        <input name="price" id="price" type="number"/>  </li>
+                        <input name="price" id="price" type="number" min="0" value="0"/>  </li>
 
                         <li> <label for="qnt">Inserire la quantità di articoli:    </label> 
-                        <input name="qnt" id="qnt" type="number"/>  </li>  
+                        <input name="qnt" id="qnt" type="number" min="0" value="0"/>  </li>  
 
                     </ul> 
             
