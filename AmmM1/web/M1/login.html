@@ -28,25 +28,25 @@ and open the template in the editor.
             </ul>      
         </nav>      
         
+        <!-- L'utilizzo di <article> per inglobare la <section> genera un warning su w3c validator, quindi
+             l'ho eliminato. -->
         
-        <article>
-            <section>
-                <h2>Inserisci i dati per il login:</h2>
-                <form method="post" action="login.html">
-                    <label for="nome">Nome utente</label>
-                    <input name="nome" id="nome" type="text"/> 
-                    <label for="password">Password</label>
-                    <input name="password" id="password" type="password"/>
+        <section>
+            <h2>Inserisci i dati per il login:</h2>
+            <form method="post" action="login.html">
+                <label for="nome">Nome utente</label>
+                <input name="nome" id="nome" type="text"/> 
+                <label for="password">Password</label>
+                <input name="password" id="password" type="password"/>
 
-                    <label for="account">Tipologia account</label>
-                    <select name="account" id="account">
-                        <option value="cliente">Cliente</option>
-                        <option value="venditore">Venditore</option>                
-                    </select>
+                <label for="account">Tipologia account</label>
+                <select name="account" id="account">
+                    <option value="cliente">Cliente</option>
+                    <option value="venditore">Venditore</option>                
+                </select>
             
-                    <input type="submit" value="Log In"/>
-                </form>
-            </section>
-       </article>        
+                <input type="submit" value="Log In"/>
+            </form>
+        </section>               
     </body>
 </html>

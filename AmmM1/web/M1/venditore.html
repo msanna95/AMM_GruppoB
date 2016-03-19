@@ -27,9 +27,11 @@ and open the template in the editor.
             </ul>            
         </nav>
         
-        <article>
-            <section>
-                <h2>Metti in vendita un articolo:</h2>
+        <!-- L'utilizzo di <article> per inglobare la <section> genera un warning su w3c validator, quindi
+             l'ho eliminato. -->
+        
+        <section>
+            <h2>Metti in vendita un articolo:</h2>
                 <form method="get" action="venditore.html">
             
                     <ul>
@@ -53,7 +55,6 @@ and open the template in the editor.
                     <button type="submit"> Aggiungi l'oggetto in vendita!</button>
             
                 </form>
-            </section>
-        </article>
+        </section>
     </body>
 </html>
