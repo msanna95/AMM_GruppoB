@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Log In</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="MarcoSanna">
+		<meta name="description" content="Area di log in per l'utente">
+		<meta name="keywords" content="autoricambi, log in">    
+    </head>
+    
+    <body>
+        <header>
+            <h1> Autoricambi Online  </h1>            
+        </header>
+        
+        <!-- AREA DI NAVIGAZIONE -->        
+        <nav>
+            <h2> Sezione Navigazione: </h2>
+            <ul>
+                <li><a href="descrizione.html"> Pagina Descrizione </a></li>
+                <li><a href="cliente.html"> Pagina Cliente </a></li>
+                <li><a href="venditore.html"> Pagina Venditore </a> </li>
+            </ul>      
+        </nav>       
+        
+        <!-- AREA LOG IN UTENTE
+             Ho preferito l'uso del div rispetto a article e section essendo secondo me più adatto. -->
+        
+        <div>
+            <h2>Inserisci i dati per il login:</h2>
+            <form method="post" action="login.html">
+                <label for="nome">Nome utente</label>
+                <input name="nome" id="nome" type="text"/> 
+                <label for="password">Password</label>
+                <input name="password" id="password" type="password"/>
+
+                <label for="account">Tipologia account</label>
+                <select name="account" id="account">
+                    <option value="cliente">Cliente</option>
+                    <option value="venditore">Venditore</option>                
+                </select>
+            
+                <input type="submit" value="Log In"/>
+            </form>
+        </div>               
+    </body>
+</html>
