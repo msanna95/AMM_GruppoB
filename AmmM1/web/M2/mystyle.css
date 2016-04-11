@@ -292,8 +292,39 @@ img{
 	}	
 }
 
-@media only screen and (max-width: 619px) 
+
+@media only screen and (max-width: 619px)
+    and (min-width: 480px)
 {	
+    
+	.content{		
+		padding-right: 8%;		
+	}
+	
+	.menu-navigazione-nascosto{
+		display: block;
+		
+	}
+	
+	.menu-navigazione{
+		display: none;		
+	}	
+	
+	#contenitore-contenuto-acquisti{
+		width: 90%;	
+		font-size: 0.8em;	
+		background-size:100%;
+	}	
+}
+
+@media only screen and (max-width: 480px) 
+{	
+        
+        
+        img{
+            width: 100px;
+        }
+    
 	.content{		
 		padding-right: 8%;		
 	}
