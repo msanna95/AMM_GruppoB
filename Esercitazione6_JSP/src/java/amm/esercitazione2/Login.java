@@ -5,11 +5,8 @@
  */
 package amm.esercitazione2;
 
-import amm.esercitazione2.Classi.Professore;
-import amm.esercitazione2.Classi.Utente;
-import amm.esercitazione2.Classi.UtentiFactory;
+import amm.esercitazione2.Classi.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -63,15 +60,15 @@ public class Login extends HttpServlet {
                     }
                 }
                 
-                }
+            }
                     
                 
-            }
-        
         }
+        request.getRequestDispatcher("form_login.jsp").forward(request, response);
+    }
                 
         
-        request.getRequestDispatcher("form_login.jsp").forward(request, response);
+        
         
     }
 
@@ -114,4 +111,4 @@ public class Login extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-}
+
