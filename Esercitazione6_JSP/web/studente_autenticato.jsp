@@ -4,8 +4,8 @@
     Author     : MARCO
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -76,22 +76,22 @@
             <!-- contenuto -->
             <div id="content">
                 <div class="input-form">
-                    <h3>Bentornato ${studente.nome}</h3>
+                    <h3>Bentornato ${studente.nome} 
+                        ${studente.cognome}</h3>
                     
-                    <div>
-                        ID: %{professore.id}
-                    </div>
-                    <div>
-                        Esami sostenuti:
-                        <ul>
-                            <c:forEach var="esame" items="${studente.esamiSuperati}">
-                                <li>
-                                    ${esame.materia.nome} ${esame.voto}
-                                </li>
-                            </c:forEach>
-                        </ul>
-                    </div>
-
+                        <div>
+                            Id: ${studente.id}
+                        </div>
+                        <div>
+                            Esami sostenuti:
+                            <ul>
+                                <c:forEach var="esame" 
+                                           items="${studente.esamiSuperati}">
+                                    
+                                    <li>${esame.materia.nome} - ${esame.voto}</li>
+                                </c:forEach>
+                            </ul>
+                        </div>
                     
                 </div>
             </div>
@@ -118,17 +118,4 @@
             </footer>
         </div>
     </body>
-
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-        
-            
-        
-        
-    </body>
 </html>
-

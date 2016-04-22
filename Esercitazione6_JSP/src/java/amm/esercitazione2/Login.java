@@ -5,18 +5,22 @@
  */
 package amm.esercitazione2;
 
-import amm.esercitazione2.Classi.*;
+import amm.esercitazione2.Classi.Professore;
+import amm.esercitazione2.Classi.Utente;
+import amm.esercitazione2.Classi.UtentiFactory;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author MARCO
+ * @author Alessandro
  */
 @WebServlet(name = "Login", urlPatterns = {"/Login"})
 public class Login extends HttpServlet {
@@ -34,41 +38,43 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        if(request.getParameter("Submit") != null){
-            
+        HttpSession session = request.getSession(true);
+        
+        if(request.getParameter("Submit") != null)
+        {
             String username = request.getParameter("Username");
             String password = request.getParameter("Password");
             
-            ArrayList<Utente> listaUtenti= UtentiFactory.getInstance().getUserList();
+            ArrayList<Utente> listaUtenti = UtentiFactory.getInstance()
+                    .getUserList();
             
-            for(Utente u: listaUtenti){
-            
-                if(u.getUsername().equals(username) && u.getPassword().equals(password)){
-                
-                    if(u instanceof Professore){
-                        
-                        request.setAttribute("professore", u);
-                        request.getRequestDispatcher("professore_autenticato.jsp").forward(request, response);
-                        
-                    }
-                    else{
+            for(Utente u : listaUtenti)
+            {
+                if(u.getUsername().equals(username) && 
+                        u.getPassword().equals(password))
+                {
+                    session.setAttribute("loggedId", true);
+                    session.setAttribute("id", u.getId());
                     
+                    if(u instanceof Professore)
+                    {
+                        request.setAttribute("professore", u);
+                        
+                        request.getRequestDispatcher("professore_autenticato.jsp")
+                                .forward(request, response);
+                    }
+                    else
+                    {
                         request.setAttribute("studente", u);
-                        request.getRequestDispatcher("studente_autenticato.jsp").forward(request, response);
-                        
-                        
+                        request.getRequestDispatcher("studente_autenticato.jsp")
+                                .forward(request, response);
                     }
                 }
-                
             }
-                    
-                
+            
         }
-        request.getRequestDispatcher("form_login.jsp").forward(request, response);
-    }
-                
-        
-        
+        request.getRequestDispatcher("form_login.jsp")
+                .forward(request, response);
         
     }
 
@@ -111,4 +117,4 @@ public class Login extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-
+}

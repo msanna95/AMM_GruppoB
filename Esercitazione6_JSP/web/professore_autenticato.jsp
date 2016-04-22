@@ -4,8 +4,8 @@
     Author     : MARCO
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -76,22 +76,34 @@
             <!-- contenuto -->
             <div id="content">
                 <div class="input-form">
-                    <h3>Bentornato ${professore.nome}</h3>
+                    <h3>Bentornato ${professore.nome} 
+                        ${professore.cognome}</h3>
                     
-                    <div>
-                        ID: %{professore.id}
-                    </div>
-                    <div>
-                        Corsi insegnati:
-                        <ul>
-                            <c:forEach var="materia" items="${professore.corsiAssegnati}">
-                                <li>
-                                    ${materia.nome}
-                                </li>
-                            </c:forEach>
-                        </ul>
-                    </div>
-
+                        <div>
+                            Id: ${professore.id}
+                        </div>
+                        <div>
+                            Corsi insegnati:
+                            <ul>
+                                <c:forEach var="materia" 
+                                           items="${professore.corsiAssegnati}">
+                                    
+                                    <li>${materia.nome}</li>
+                                </c:forEach>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3> Registrazione Esami </h3>
+                            <ul>
+                                <c:forEach var="alunno"
+                                           items="${alunni}">
+                                    <li>${alunno.nome} ${alunno.cognome} <a href="Registra?idAlunno=${alunno.id}">
+                                            Registra esame </a></li>
+                                </c:forEach>
+                                
+                            </ul>
+                        </div>
                     
                 </div>
             </div>
@@ -117,17 +129,5 @@
                 </div>
             </footer>
         </div>
-    </body>
-
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-        
-            
-        
-        
     </body>
 </html>
