@@ -1,0 +1,356 @@
+/*** IMPOSTAZIONI GENERALI DELLE PAGINE ***/
+
+body, ul, nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;		
+	font-family: Verdana, sans-serif, Arial;
+	text-decoration: none;
+	list-style: none;
+}
+
+body{		
+	background-image: url("img/sfondo.jpg");
+	line-height: 1;
+}
+
+a{
+	text-decoration:none;
+}
+
+p{
+	width: 97%;
+}
+
+h3{
+	background-color: #66ff00;
+	color: black;
+	border: 3px #66ff00;
+	border-style: solid;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	padding-left: 3px;
+}
+
+form{
+	padding-bottom: 1%;
+}
+
+label::after, label::before {
+	content: '\A';
+	white-space: pre;	
+}
+
+button, input, textarea { 
+    margin-top: 6px;
+    border: 1px solid #323232; 
+    color: black; 
+    height: 30px;      
+    width: 50%; 
+    padding: 0 10px; 
+}
+
+button, input[type="submit"], .b-table-add{
+	border: 1px solid #323232;
+	border-radius: 20px;
+	background: #66ff00;
+}
+
+textarea { 
+    font-size: 12px;
+	resize: vertical; /* Abilito solo il resize verticale */
+    overflow: hidden; 
+	line-height: 20px;
+}
+
+img{
+	width: auto;
+}
+
+/*** IMPOSTAZIONI SPECIFICHE DELLE PAGINE (CLASSI E ID) ***/
+
+/** DIMENSIONI BARRA DI NAVIGAZIONE **/
+
+.barra-navigazione{
+	width:100%;
+	background: #007EFF;	
+}
+
+/* DIMENSIONI CONTENITORE LOGO E MENU NAVIGAZIONE */
+
+.contenitore-menu-navigazione {
+	width:95%;	
+	margin:0 auto;
+	top: 0;
+	overflow:hidden;
+	
+}
+
+/* DIMENSIONI LOGO(O SCRITTA) DEL MENU */
+
+.logo-menu-navigazione, .menu-navigazione-nascosto{
+	float:left;
+	display:block;
+	padding:20px 10px;
+	color: #66ff00;
+	font-weight:800;	
+}
+
+/* POSIZIONE ,DIMENSIONE E EFFETTI MENU VERO E PROPRIO */
+
+
+
+/** DIMENSIONI E POSIZIONAMENTO BARRA DI NAVIGAZIONE SIDEBAR **/
+
+.sidebar{
+	padding-left: 3%;
+	padding-top: 3%;	
+	float: left;
+	height: 210px;
+	width: 210px;	
+}
+
+.contenitore-menu-navigazione-sidebar{
+	width: 100%;	
+	top: 0;	
+	overflow:hidden;
+	border: 3px #66ff00;
+	border-style: solid;
+	border-radius: 25px;
+	background: #007EFF;
+}
+
+.menu-navigazione-sidebar li{	
+	float:left;	
+	list-style:none;		
+}
+
+.menu-navigazione-sidebar li a{	
+	text-align: left;
+    display: block;
+	padding:20px 20px;
+	color: #F6F6F6;	
+	width: 210px;	
+}
+
+.menu-navigazione-sidebar li a:hover{
+	background: #66ff00;
+	color: #000;
+	font-weight:bold;
+	
+}
+
+/** DIMENSIONI E POSIZIONAMENTO CONTENUTO **/
+
+.content{
+	padding-left: 3%;
+	padding-top: 3%;
+	padding-right: 122px;	
+	float: left;	
+	width: 60%;	
+	color: #F6F6F6;	
+}
+
+#contenitore-contenuto-testuale{
+	width: 100%;	
+	top: 0;	
+	background: #007EFF;
+	padding-left: 3%;
+	padding-top: 1%;
+	border: 3px #66ff00;
+	border-style: solid;
+	border-radius: 25px;	
+	font-size: 118%;	
+}
+
+#contenitore-contenuto-login{
+				
+	background: #007EFF;	
+	border: 3px #66ff00;
+	border-style: solid;
+	border-radius: 25px;	
+	font-size: 1.2em;
+	text-align: center;	
+	width: auto;
+	padding-left: 6%;
+	padding-right: 6%;
+	float: left;	
+	padding-bottom: 2%;	
+	
+}
+
+#contenitore-contenuto-vendite{
+				
+	background: #007EFF;	
+	border: 3px #66ff00;
+	border-style: solid;
+	border-radius: 25px;	
+	font-size: 1.2em;
+	text-align: left;	
+	width: auto;
+	padding-left: 6%;
+	padding-right: 6%;
+	float: left;	
+	padding-bottom: 2%;	
+}
+
+#campi-input-vendita{
+	list-style-type:none;
+}
+
+/** ACQUISTI **/
+
+#contenitore-contenuto-acquisti{
+	width: 60%;	
+	top: 0;	
+	background: #007EFF;	
+	padding-top: 1%;
+	border: 3px #66ff00;
+	border-style: solid;
+	border-radius: 25px;	
+	font-size: 118%;
+	padding-left: 6%;
+	padding-right: 6%;	
+}
+
+.b-table-add{
+	border: 3px black;
+	border-style: solid;
+	border-radius: 25px;	
+	text-align: center;
+}
+
+.b-table-img{
+	background: white;
+	border: 3px black;
+	border-style: solid;
+	border-radius: 25px;
+	text-align: center;
+}
+
+#logout form input{
+    width: auto;
+    top: 510px;
+    float: right;
+}
+
+#hid{
+    display: none;
+}
+
+@media only screen and (min-width: 619px)
+{
+	.menu-navigazione{
+		float:right;
+	}
+
+	.menu-navigazione li{
+		float:left;	
+		list-style:none;
+		text-transform: uppercase;
+	}
+
+	.menu-navigazione li a{
+		display:block;
+		padding:20px 10px;
+		color: #F6F6F6;	
+	}
+
+	.menu-navigazione li a:hover{
+		background: #66ff00;
+		color: #000;
+		font-weight:bold;
+	}
+}
+
+@media only screen and (max-width: 619px)
+{
+	.menu-navigazione{
+		
+		text-align: center;
+		top: 10%;
+		float: left;
+	}
+
+	.menu-navigazione li{
+		
+		list-style:none;
+		text-transform: uppercase;
+	}
+
+	.menu-navigazione li a{
+		display:block;
+		padding:20px 10px;
+		color: #F6F6F6;	
+		border: 3px #66ff00;
+		border-style: solid;
+		border-radius: 25px;
+		width: 150%;
+	}
+
+	.menu-navigazione li a:hover{
+		background: #66ff00;
+		color: #000;
+		font-weight:bold;
+	}
+}
+
+@media only screen and (max-width: 1024px)
+{
+	.sidebar {
+		display: none;
+	}
+
+	.content{
+		width: auto;
+		padding-left: 6%;
+		padding-right: 6%;
+		float: left;
+	}
+	
+	.menu-navigazione{
+		font-size: 0.8em;		
+	}
+	
+	#contenitore-contenuto-acquisti{
+		width: 90%;			
+	}	
+}
+
+
+@media only screen and (max-width: 619px)
+    and (min-width: 480px)
+{	
+    
+	.content{		
+		padding-right: 8%;		
+	}	
+	
+	#contenitore-contenuto-acquisti{
+		width: 90%;	
+		font-size: 0.8em;	
+		background-size:100%;
+	}	
+}
+
+@media only screen and (max-width: 480px) 
+{	
+    
+        
+        img{
+            width: 100px;
+        }
+    
+	.content{		
+		padding-right: 8%;		
+	}
+	
+	
+	
+	#contenitore-contenuto-acquisti{
+		width: 90%;	
+		font-size: 0.8em;	
+		background-size:100%;
+	}	
+}
