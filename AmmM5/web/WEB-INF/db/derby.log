@@ -1,0 +1,4 @@
+Fri May 27 11:42:26 CEST 2016 : Ascolto impossibile sulla porta 1527 dell'host localhost:
+ java.net.BindException: Address already in use: JVM----------------------------------------------------------------
+Fri May 27 12:45:49 CEST 2016: arresto in corso del motore di Derby
+----------------------------------------------------------------
