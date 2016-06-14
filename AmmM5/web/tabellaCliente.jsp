@@ -5,12 +5,13 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="json" uri="http://www.atg.com/taglibs/json" %>
 
 <!-- JSP TABELLA OGGETTI IN VENDITA -->
 <!DOCTYPE html>
 
 
-    <table>
+<table id="tableCliente">
 
     <c:forEach var="oggetto" items="${listaOggetti}">
         

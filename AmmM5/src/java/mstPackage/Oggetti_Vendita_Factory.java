@@ -46,7 +46,8 @@ public class Oggetti_Vendita_Factory {
         
     }
 
-    /** Metodo per inizializzare la lista degli oggetti con i dati del database **/
+    /** Metodo per inizializzare la lista degli oggetti con i dati del database
+     * @throws java.sql.SQLException **/
     public void inizializzaOggetti() throws SQLException{
         
         listaOggetti = new ArrayList<>();
@@ -361,4 +362,45 @@ public class Oggetti_Vendita_Factory {
         }
         return null;
     }
+    
+    public ArrayList<Oggetti_Vendita> getSearchedItem(String txt){
+        
+        ArrayList<Oggetti_Vendita> lista = new ArrayList<>();
+        txt = "%" + txt + "%";
+        try{
+            
+            Connection conn;
+            Statement stmt;
+            conn = DriverManager.getConnection(connectionString, "prova", "prova");            
+            stmt = conn.createStatement();
+            /** DATI OGGETTO **/            
+            String sql = "select * oggetto where nome like " + txt;
+            ResultSet set = stmt.executeQuery(sql);
+            while (set.next()) {
+                Oggetti_Vendita current = new Oggetti_Vendita();
+                current.setId(set.getInt("id"));
+                current.setNomeOggetto(set.getString("nome"));
+                current.setUrlOggetto(set.getString("url"));
+                current.setDescrOggetto(set.getString("descrizione"));
+                current.setPezziDisponibili(set.getInt("pezzi"));
+                current.setPrezzo(set.getDouble("prezzo"));
+                current.setId_venditore(set.getInt("id_venditore"));
+                lista.add(current);
+            }
+            stmt.close();
+            /** **/            
+            conn.close(); 
+            
+            //return listaOggettiSingoloVenditore;
+            
+        } catch (SQLException ex) {
+            // nel caso la query fallisca (p.e. errori di sintassi)
+            // viene sollevata una SQLException
+            Logger.getLogger(Oggetti_Vendita_Factory.class.getName()).
+            log(Level.SEVERE, null, ex);
+       }
+        
+        return lista;
+    }
+    
 }

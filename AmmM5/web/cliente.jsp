@@ -5,6 +5,8 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="json" uri="http://www.atg.com/taglibs/json" %>
+
 <!DOCTYPE html>
 
 <!-- JSP PAGINA INIZIALE CLIENTE -->
@@ -17,6 +19,8 @@
 		<meta name="description" content="Area clienti per gli acquisti">
 		<meta name="keywords" content="autoricambi, acquisto articoli">
 		<link href="./mystyle.css" rel="stylesheet" type="text/css" media="screen" />
+                <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+                <script type="text/javascript" src="./js/filter.js"></script>
     </head>
     
     <body>
@@ -34,9 +38,9 @@
                     <p> Saldo: ${saldoCliente.getSaldo()}
                     <h2> Articoli in vendita </h2>
                     
-                    <div><input type="search" placeholder="Filtra" name="filtra" id="filtra"/></div>
+                    <input type="search" placeholder="Filtra" name="filtra" id="filtra" />
 
-                    <%@ include file="tabellaCliente.jsp" %>                                        
+                    <%@ include file="tabellaCliente.jsp" %>                                  
 
                 </div>
             </div>
